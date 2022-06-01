@@ -7,16 +7,14 @@ pipeline{
             }
         }
         stage('stage2'){
-            steps{
-                echo "stage 2"
-            }
+            stages{
+                        stage('inner stage1'){
+                            steps{
+                                echo "inner stage1"
+                            }
+                        }
+                    }
         }
-        stages{
-            stage('inner stage1'){
-                steps{
-                    echo "inner stage1"
-                }
-            }
-        }
+
     }
 }
