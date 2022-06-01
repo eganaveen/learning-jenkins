@@ -11,5 +11,12 @@ pipeline{
                 echo "stage 2"
             }
         }
+        stages{
+            stage('inner stage1'){
+                steps{
+                    echo "inner stage1"
+                }
+            }
+        }
     }
 }
