@@ -7,7 +7,6 @@ pipeline{
                         values 'linux','mac','windows'
                     }
                 }
-            }
     stages{
         stage('stage1'){
             steps{
@@ -42,5 +41,6 @@ pipeline{
                                 }
             }
         }
+    }
     }
 }
