@@ -4,9 +4,9 @@ pipeline{
         axes{
            axis{
               name 'PLATFORM'
-                  values 'linux','mac','windows'
-              }
+              values 'linux','mac','windows'
            }
+        }
         stages{
             stage('stage1'){
                 steps{
@@ -35,10 +35,10 @@ pipeline{
                         }
                     }
                     stage('parallel-3'){
-                                        steps{
-                                            echo "parallel-3......."
-                                        }
-                                    }
+                         steps{
+                            echo "parallel-3......."
+                        }
+                    }
                 }
             }
         }
