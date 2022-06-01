@@ -34,5 +34,13 @@ pipeline{
                                 }
             }
         }
+        matrix{
+            axes{
+                axis{
+                    name 'PLATFORM'
+                    values 'linux','mac','windows'
+                }
+            }
+        }
     }
 }
