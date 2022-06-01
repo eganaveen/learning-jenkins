@@ -1,5 +1,13 @@
 pipeline{
     agent any
+    matrix{
+                axes{
+                    axis{
+                        name 'PLATFORM'
+                        values 'linux','mac','windows'
+                    }
+                }
+            }
     stages{
         stage('stage1'){
             steps{
@@ -32,14 +40,6 @@ pipeline{
                                         echo "parallel-3......."
                                     }
                                 }
-            }
-        }
-        matrix{
-            axes{
-                axis{
-                    name 'PLATFORM'
-                    values 'linux','mac','windows'
-                }
             }
         }
     }
