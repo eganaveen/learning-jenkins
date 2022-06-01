@@ -15,6 +15,15 @@ pipeline{
                         }
                     }
         }
-
+        stage('parallel'){
+            parallel{
+                stage('parallel-1'){
+                    echo "parallel-1......."
+                }
+                stage('parallel-2'){
+                    echo "parallel-2......."
+                }
+            }
+        }
     }
 }
